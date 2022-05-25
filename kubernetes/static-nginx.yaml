@@ -14,7 +14,7 @@ spec:
       containers:
       - name: nginx
         imagePullPolicy: IfNotPresent
-        image: nginx:latest
+        image: s114623/frontend-chatapp:latest
         ports:
           - containerPort: 80
             name: http-web-svc
