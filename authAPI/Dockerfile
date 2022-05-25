@@ -1,14 +1,6 @@
-FROM node 
-
-WORKDIR /home/node/app
-
-COPY *.js /home/node/app
-COPY package.json /home/node/app
-
-RUN [ "npm","install" ]
-
-ENV NODE_ENV=production
-
-CMD ["node","index.js"]
-
+FROM node
+WORKDIR /app
+COPY . .
+RUN npm install
+ENTRYPOINT  npm start
 EXPOSE 3000
